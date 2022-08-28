@@ -1,0 +1,122 @@
+.send {
+    background-color: rgba(255, 255, 255, 0.603);
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+        &_top{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            i {
+                margin-left: 20px;
+                position: absolute;
+                font-size: 23px;
+                left: 242px;
+                cursor: pointer;
+            }
+            p {
+                color: #283562;
+                font-size: 20px !important;
+            }
+        }
+        &_btn {
+            margin-top: 20px;
+            button {
+                width: 132px;
+                height: 49px;
+                border: none;
+                border-radius: 10px;
+                outline: none;
+            }
+            button:hover {
+                background-color: #282e2d;
+                color: #fff;
+            }
+        }
+        &_inner
+        {
+            width: 320px;
+            // height: 310px;
+            background: #8ea5a3;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            color: #283562;
+            overflow: auto;
+            font-size: 15px;
+    
+            hr {
+                color: #283562;
+            }
+        }
+        p {
+            text-align: center;
+            font-size: small;
+            margin-bottom: 0px;
+    
+        }
+        &_inputbox {
+            input {
+                border: none;
+                padding: 15px;
+                margin: 10px;
+                border-radius: 10px;
+                outline: none;
+                width: 90%;
+            }
+
+        }
+    }
+    .image_section {
+        background: #fcfdff;
+        /* padding: 70px; */
+        border-radius: 10px;
+        margin-top: 20px;
+        height: 228px;
+        width: 90%;
+        margin: auto;
+        margin-top: 17px;
+
+        .barcode_section1 {
+            width: 40px;
+            // background-color: #A9AEC0;
+            height: 37px;
+            margin-top: 20px;
+            border-radius: 10px;
+            margin-left: 22px;
+            margin: auto;
+            padding-top: 91px;
+            
+            input {
+                display: none;
+            }
+            .section_body {
+                margin-top: 5px;
+
+            }
+                .icon {
+                    cursor: pointer;
+                    background-color: white;
+                    width: 70%;
+                    padding: 4px;
+                    border-radius: 9px;
+                }
+                .uploaded-icon {
+                    cursor: pointer;
+                    width: 302px;
+                    height: 228px;
+                    border-radius: 9px;
+                    margin: -97px -36px 0px -130px;
+                }
+          }
+        
+      }

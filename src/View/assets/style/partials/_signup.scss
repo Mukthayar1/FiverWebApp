@@ -1,0 +1,116 @@
+.signup-home{
+    background: url("../../images//wallpaper.png");
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.signup{
+    height: 690px;
+    width: 480px;
+    margin: auto;
+    // margin-top: 150px;
+    box-shadow: 0 0 34px 0 #cfcfcf;
+    background-color: #fbf9f9;
+    border-radius: 15px;
+    position: relative;
+    top: 100px;
+    &_logo {
+
+        text-align: center;
+
+        img {
+            width: 64%;
+            padding: 27px;
+        }
+    }
+    &_heading {
+        margin-left: 70px;
+        font-size: 15px;
+        margin-bottom: 6px;
+        font-weight: 640;
+        color: gray;
+        padding-top: 10px;
+    }
+    &_inputbox {
+        border: 1px solid #b4b4b4;
+        border-radius: 9px;
+        padding: 15px;
+        margin-left: 70px;
+        width: 70%;
+        padding-left: 34px;
+        outline: none;
+    }
+    &_btn {
+        border: none;
+        border-radius: 10px;
+        color: #fff;
+        margin-top: 20px;
+        padding: 15px;
+        padding-bottom: 15px;
+        width: 70%;
+        margin-left: 70px;
+        background:  linear-gradient(to bottom right, #f78062 0%, #f45664 100%);
+        box-shadow: 0 0 10px 0 #565f79;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    &_btn:hover {
+        background:linear-gradient(to bottom right, #df3d14 0%, #f07f88 100%);
+    }
+    .fa-user {
+        position: absolute;
+        left: 82px;
+        top: 175px;
+        color: gray;
+        font-size: 17px;    
+    }
+    .fa-envelope {
+        position: absolute;
+        left: 82px;
+        top: 270px;
+        color: gray;
+        font-size: 17px;    
+    }
+    .fa-lock {
+        position: absolute;
+        left: 82px;
+        top: 550px;
+        color: gray;
+        font-size: 17px;
+    }
+    .lock2 {
+        position: absolute;
+        left: 82px;
+        top: 457px;
+        color: gray;
+        font-size: 17px;
+    }
+
+    .fa-phone {
+        position: absolute;
+        left: 82px;
+        top: 365px;
+        color: gray;
+        font-size: 17px; 
+        transform: rotate(100deg);
+    }
+    .fa-eye {
+        position: absolute;
+        right: 88px;
+        /* top: 457px; */
+        margin-top: 18px;
+        color: gray;
+        font-size: 17px;
+        cursor: pointer;
+    }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

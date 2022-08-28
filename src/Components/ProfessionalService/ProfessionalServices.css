@@ -1,0 +1,194 @@
+main.cards {
+  display: flex;
+  margin: 0 20px;
+  background-color: #fff;
+  border: 1px solid #DBDBDB;
+}
+main.cards section.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: white;
+  /* padding: 1rem 1.5rem; */
+  border-radius: 8px;
+  max-height: 468px;
+  margin-left: 32px;
+}
+main.cards section.card:first-child {
+  margin-left: 0;
+}
+main.cards section.card .icon {
+  height: 200px;
+}
+.icon
+{
+width: 100%;
+}
+.icon img
+{
+height: 100%;
+width: 100%;
+}
+main.cards section.card img {
+  width: 100%;
+}
+main.cards section.card h3 {
+  font-size: 100%;
+  margin: 16px 0;
+}
+main.cards section.card span {
+  font-weight: 300;
+  max-width: 240px;
+  font-size: 80%;
+  margin-bottom: 16px;
+}
+main.cards section.card button {
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  border-radius: 32px;
+  border: 0;
+  cursor: pointer;
+  font-size: 80%;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 16px 0;
+}
+main.cards section.card.contact .btn1 {
+  height: 20px;
+  width: 50px;
+  background: #4586DB;
+  font-size: 13px;
+  padding: 0px;
+  margin-right: 120px;
+  margin-top: -10px;
+}
+main.cards section.card.shop .btn1 {
+  background: linear-gradient(to right, #3E8AFF, #BBDEFF);
+}
+main.cards section.card.about .btn1 {
+  background: linear-gradient(to right, #FE5F8F, #FFC7D9);
+}
+main.cards section.card.contact {
+  box-shadow: 20px 20px 50px -30px #DBC4FF;
+}
+main.cards section.card.shop {
+  box-shadow: 20px 20px 50px -30px #AFD6FF;
+}
+main.cards section.card.about {
+  box-shadow: 20px 20px 50px -30px #FFC1D5;
+}
+.card_body {
+    width: 100%;
+    padding: 20px;
+}
+.user_icon {
+    width: 38px !important;
+}
+.user_text{
+    text-align: left;
+}
+.user_text p{
+    color: black;
+    font-weight: 400;
+}
+.user_star{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0 !important;
+}
+.user_star span{
+    color: rgb(255, 187, 0);
+    font-size: 32px !important;
+    margin-bottom: 4px !important;
+}
+.user_star .yellow{
+    color: rgb(255, 187, 0);
+    font-size: 17px !important;
+    margin-bottom: 0 !important;
+}
+.user_star .bracket{
+    color: #AEAEAE;
+    font-size: 15px !important;
+    margin-bottom: -4px !important;
+    margin-left: 5px;
+}
+.user_line {
+    width: 100%;
+}
+.card_bottom {
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card_bottom i{
+    font-size: 22px !important;
+    margin-bottom: 0px !important;
+    color: #D2CECE;
+}
+.right p {
+    margin-bottom: 0 !important;
+}
+.right_price {
+    font-size: 20px;
+}
+@media screen and (max-width: 720px) {
+  main.cards {
+      flex-direction: column;
+  }
+  main.cards section.card {
+      margin-left: 0;
+      margin-bottom: 32px;
+  }
+  main.cards section.card:last-child {
+      margin-bottom: 0;
+  }
+  main.cards section.card button {
+      font-size: 70%;
+  }
+}
+.user {
+display: flex;
+/* margin-right: 130px; */
+/* height: 70px; */
+}
+.user img {
+border-radius: 50%;
+width: 30px;
+height: 30px;
+margin-top: 10px;
+}
+.user h3
+{
+padding-left: 10px;
+}
+hr
+{
+color: #3E8AFF;
+/* height: 20px; */
+/* width: 230px; */
+}
+.star
+{
+font-size: 25px;
+margin-top: -33px;
+color: rgb(255, 187, 0);
+margin-left: 30px;
+}
+h4
+{
+font-size: 17px;
+padding: 0px;
+padding-left: 80px;
+margin-top: -30px;
+color: rgb(255, 187, 0);
+}
+h5
+{
+font-size: 17px;
+padding: 0px;
+padding-left: 130px;
+margin-top: -36px;
+}

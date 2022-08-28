@@ -1,0 +1,101 @@
+.header {
+    background-image: url('../../images/wallpaper.png');
+    background-size: cover;
+    min-height: 100vh;
+}
+.login {
+    height: 500px;
+    width: 480px;
+    margin: auto;
+    // margin-top: 150px;
+    box-shadow: 0 0 34px 0 #cfcfcf;
+    background-color: #fbf9f9;
+    border-radius: 15px;
+    position: relative;
+    top: 200px;
+    &_logo {
+
+        text-align: center;
+
+        img {
+            width: 64%;
+            padding: 27px;
+        }
+    }
+    &_heading {
+        margin-left: 70px;
+        font-size: 15px;
+        margin-bottom: 6px;
+        font-weight: 640;
+        color: gray;
+        padding-top: 10px;
+    }
+    &_inputbox {
+        border: 1px solid #b4b4b4;
+        border-radius: 9px;
+        padding: 15px;
+        margin-left: 70px;
+        width: 70%;
+        padding-left: 34px;
+        outline: none;
+    }
+    &_btn {
+        border: none;
+        border-radius: 10px;
+        color: #fff;
+        margin-top: 20px;
+        padding: 15px;
+        padding-bottom: 15px;
+        width: 70%;
+        margin-left: 70px;
+        background:  linear-gradient(to bottom right, #f78062 0%, #f45664 100%);
+        // box-shadow: 0 0 10px 0 #565f79;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.4s linear;
+    }
+    &_btn-2 {
+        border: none;
+        border-radius: 10px;
+        color: black;
+        margin-top: 20px;
+        padding: 15px;
+        padding-bottom: 15px;
+        width: 70%;
+        margin-left: 70px;
+        background-color:  white;
+        // box-shadow: 0 0 10px 0 #565f79;
+        font-weight: 600;
+        outline: 1px solid #565f7963;
+        cursor: pointer;
+    }
+    &_btn-2:hover {
+        background-color:#e7e7e7;
+        box-shadow: 0 0 10px 0 #c0c2ca;
+    }
+    &_btn:hover {
+        background:linear-gradient(to bottom right, #df3d14 0%, #f07f88 100%);
+    }
+    .fa-envelope {
+        position: absolute;
+        left: 82px;
+        top: 175px;
+        color: gray;
+        font-size: 17px;    
+    }
+    .fa-lock {
+        position: absolute;
+        left: 82px;
+        top: 269px;
+        color: gray;
+        font-size: 17px;
+    }
+    .fa-eye {
+        position: absolute;
+        right: 88px;
+        top: 269px;
+        color: gray;
+        font-size: 17px;
+        cursor: pointer;
+    }
+}

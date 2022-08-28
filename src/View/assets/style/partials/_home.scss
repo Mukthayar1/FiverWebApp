@@ -1,0 +1,30 @@
+.mainhome {
+    display: flex;
+    justify-content: space-between;
+
+    &_user {
+        width: 50%;
+    }
+    &_events{
+        width: 50%;
+        margin-left: 20px;
+    }
+    &_heading {
+        color: #c80922;
+        font-size: 23px;
+        font-weight: bold;
+        // text-align: right;
+        margin-top: 20px;
+
+    }
+    &_eventcard {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding-bottom: 40px;
+        justify-content: center;
+    }
+}

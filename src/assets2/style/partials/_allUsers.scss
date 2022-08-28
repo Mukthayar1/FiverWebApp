@@ -1,0 +1,35 @@
+.allUser {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+
+    &_top {
+        display: flex;
+        margin: 10px 0;
+        gap: 20px;
+    }
+
+    &_right {
+        position: relative;
+        label {
+            position: absolute;
+            top: -22px;
+            font-size: 14px;
+        }
+        input {
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            outline: none;
+        }
+    }
+    &_left {
+        input {
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            outline: none;
+        }
+    }
+}

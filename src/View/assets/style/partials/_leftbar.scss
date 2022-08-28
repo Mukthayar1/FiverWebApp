@@ -1,0 +1,96 @@
+.leftbar {
+    min-height: 100vh;
+    color: #fff;
+    width: 260px;
+    background-color: #090c18;
+    font-size: 16px;
+    padding: 20px;
+    
+    &_logo {
+        text-align: center;
+        img {
+            width: 60%;
+        }
+    } 
+    &_active {
+        background-color: #00ACC1;
+    }
+    &_line {
+        margin-top: 30px;
+        width: 100%;
+        color: #fff;
+    }
+    &_inner {
+
+        ul {
+            margin: 74px -4px 0;
+            padding-left: 0;
+        }
+        li {
+            list-style-type: none;
+            margin-bottom: 15px;
+        }
+        a {
+            align-items: center;
+            border-radius: 10px;
+            color: #fff;
+            display: flex;
+            padding: 12px 10px;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 13px;
+            position: relative;
+
+            img {   
+                width: 22px;
+                margin-right: 20px;
+            }
+            .fa-table {
+                font-size: 23px;
+                margin-right: 24px;
+                padding-left: 3px;
+            }
+            .fa-user-clock {
+                font-size: 23px;
+                margin-right: 24px;
+                padding-left: 3px;
+            }
+            .fa-angle-down {
+                position: absolute;
+                left: 165px;
+                font-size: 19px;
+            }
+            .fa-angle-right {
+                position: absolute;
+                left: 165px;
+                font-size: 19px;
+            }
+        }
+        .sub-menu:hover {
+            background-color: #00ACC1;
+            border-radius: 10px;
+            // margin: 10px 0;
+        }
+        a:hover {
+            background-color: #00ACC1;
+            
+        }
+        .sub-menu {
+            cursor: pointer;
+            text-align: center;
+            font-size: 14px;
+            border-radius: 10px;
+            margin-top: 6px !important;
+            margin: auto;        
+        }
+        .sub-menu-active {
+            background-color: #00ACC1;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 14px !important;
+            margin: auto;       
+        }
+    }
+    }

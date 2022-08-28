@@ -1,0 +1,165 @@
+.viewTable {
+    background-color: rgba(108, 108, 108, 0.603);
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        &_header {
+            position: relative;
+            img {
+                height: 200px;
+                width: 100%;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+            .cross {
+                position: absolute;
+                color: #b51313;
+                top: 8px;
+                font-size: 19px;
+                left: 307px;
+                cursor: pointer;
+                width: 35px;
+                height: 35px;
+            }
+        }
+        &_timing {
+            display: flex;
+            position: absolute;
+            top: 135px;
+            left: 20px;
+            font-size: 15px;
+
+            p {    
+                margin-bottom: 0;
+            }
+            .single {
+                margin-left: 18px;
+            }
+            .fa-clock {
+                position: absolute;
+                left: 2px;
+                top: 33px;
+                font-size: 14px;
+            }
+            .time {
+                margin-left: 12px;
+                margin-top: 5px;
+            }
+            .endTime {
+                margin-left: 20px;
+                i {
+                    left: 88px;
+                }
+            }
+        }
+        &_location {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 24px;
+
+            p {
+                margin-bottom: 0;
+                color: #283562;
+                font-size: 12px;
+            }
+            i {
+                color: #25a55c;
+                margin-right: 9px;
+                font-size: 13px;
+            }
+        }
+        &_container {
+            padding: 20px;
+            text-align: left;        
+        }
+        &_name {
+            font-size: 26px;
+            color: #283562;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+        &_creator {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+
+            i {
+                color: gray;
+                margin-right: 5px;
+                font-size: 10px;
+            }
+            p {
+                margin-bottom: 0;
+                color: gray;
+
+            }
+        }
+        &_details {
+            display: flex;
+            justify-content: space-between;
+        }
+        &_description {
+            background-color: #e7e7e7;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            p {
+                color: #283562;
+                font-size: 12px;
+                // padding: 10px
+            }
+        }
+        &_people {
+            position: absolute;
+            display: flex;
+            /* top: 186px; */
+            background: #ffffff;
+            padding: 10px 12px 9px 6px;
+            /* left: 292px; */
+            border-radius: 10px;
+            width: 61px;
+            align-items: center;
+            top: 8px;
+            left: 14px;
+
+            img {
+                width: 100%;
+                height: 20px;
+            }
+            p {
+                color: #009640;
+                padding-left: 10px;
+                margin-bottom: 0;
+            }
+        }
+        &_inner
+        {
+            width: 350px;
+            overflow: hidden;
+            height: 484px;            
+            background-color: #ccdcde;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+        }
+        &_inner:hover {
+            overflow: auto;
+            -ms-overflow-style: none;  
+            scrollbar-width: none;
+        }
+        &_inner::-webkit-scrollbar{                 
+            display: none;       
+        }  
+
+}
