@@ -1,8 +1,10 @@
 main.cards {
   display: flex;
   margin: 0 20px;
+  width: 250px;
   background-color: #fff;
   border: 1px solid #DBDBDB;
+  cursor: pointer;
 }
 main.cards section.card {
   display: flex;

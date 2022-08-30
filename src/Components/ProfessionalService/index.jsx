@@ -1,8 +1,11 @@
 import React from "react";
 import Slider from "react-slick";
+import { useNavigate } from "react-router-dom";
 import "./style.css";
 import "./ProfessionalServices.css"
 const Service = ({ title, data }) => {
+  let navigate = useNavigate();
+
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -65,6 +68,7 @@ const Service = ({ title, data }) => {
       </h2>
       <Slider {...settings}>
         {data && data?.map((item, key) => {
+          console.log('data', item)
           return (
             // <div className="rounded relative" key={key}>
             //   <img
@@ -79,39 +83,39 @@ const Service = ({ title, data }) => {
             //   </div>
             // </div>
             <div>
-                <main className="cards" key={key}>
+              <main className="cards" key={key} onClick={() => navigate(`/product/${item?.title}`)}>
                 <section className="card contact">
-                    <div className="icon">
+                  <div className="icon">
                     <img src={item?.file_Url} alt="Contact us." />
+                  </div>
+                  <div className="card_body">
+                    <div className="user">
+                      <img className="user_icon" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+                      <h3>{item?.title}</h3>
                     </div>
-                    <div className="card_body">
-                        <div className="user">
-                            <img className="user_icon" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
-                            <h3>{item?.title}</h3>
-                        </div>
-                        <div className="user_text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <div className="user_star">
-                            <span>&#9733;</span>
-                            <p className="yellow">5.0</p>
-                            <p className="bracket">(131)</p>
-                        </div>
+                    <div className="user_text">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
-                    <div className="user_line">
-                        <hr></hr>
+                    <div className="user_star">
+                      <span>&#9733;</span>
+                      <p className="yellow">5.0</p>
+                      <p className="bracket">(131)</p>
                     </div>
-                    {/* <h3>Contact us.</h3> */}
-                    <div className="card_bottom">
-                        <i className="fas fa-heart"></i>
-                        <div className="right" style={{margin:5}}>
-                            <p>STARTING AT</p>
-                            <p className="right_price" style={{fontSize:15}}>USD {item?.charges}</p>
-                        </div>
+                  </div>
+                  <div className="user_line">
+                    <hr></hr>
+                  </div>
+                  {/* <h3>Contact us.</h3> */}
+                  <div className="card_bottom">
+                    <i className="fas fa-heart"></i>
+                    <div className="right" style={{ margin: 5 }}>
+                      <p>STARTING AT</p>
+                      <p className="right_price" style={{ fontSize: 15 }}>USD {item?.charges}</p>
                     </div>
-                    {/* <button className="btn1">{item?.charges}$</button> */}
+                  </div>
+                  {/* <button className="btn1">{item?.charges}$</button> */}
                 </section>
-                </main>
+              </main>
             </div>
             //             <div className="cards" key={key}>
             //   <div className="card">

@@ -1,9 +1,8 @@
 import React, { lazy, Suspense } from "react";
 import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
 import Loading from "../Components/LoadingScreen";
+import Product from "../Components/Product";
 import useAuth from '../util/Contex/useAuth';
-
-
 import AdminRoutes from './AdminRoutes';
 import ClientRoutes from './ClientRoutes';
 import FreelancerRoutes from './FreelancerRoutes';
@@ -102,6 +101,8 @@ const MyRoutes = () => {
                             <Route path="/SignUp" element={<SignUp />} />
                         </>
                     }
+
+                    <Route path="/product/:title" element={<Product/>}/>
 
                     <Route path="*" element={isLogged == 1 || isLogged == 0 ? <Navigate to="/" replace />
                         : (isLogged === 'super' ? <Navigate to="/admindashboard" replace />

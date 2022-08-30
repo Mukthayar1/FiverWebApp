@@ -617,9 +617,9 @@ const Header = () => {
           )}
 
           {header ? (
-            <div className="relative w-1/4 -ml-52 mt-1">
+            <div className="relative w-1/4 -ml-40 mb-5 mt-1 flex items-center">
               <SearchOutlined
-                className="text-xl text-black absolute left-1 top-1 z-20 "
+                className="text-base text-black absolute left-1.5 top-3 z-20 "
                 style={{ color: "#9ca3af" }}
               />
               <input
@@ -627,7 +627,7 @@ const Header = () => {
                 type="text"
                 placeholder="Find Services"
               />
-              <button className=" py-2 px-4 border bg-green-500 border-green-500 text-white rounded-tr rounded-br">
+              <button className="py-2 px-4 border bg-green-500 border-green-500 text-white rounded-tr rounded-br">
                 Search
               </button>
             </div>
