@@ -44,14 +44,14 @@ const ClientAddJob = lazy(() => {
 });
 const ClientOrders = lazy(() => {
     return new Promise(resolve => {
-        setTimeout(() => resolve(import('../View/Clients/Orders/Orders')), 1000);
+        setTimeout(() => resolve(import('../View/Jobs')), 1000);
     });
 });
 
 //FreelancerRoutes
 const FreelancerOrders = lazy(() => {
     return new Promise(resolve => {
-        setTimeout(() => resolve(import('../View/Freelancer/Orders/Orders')), 1000);
+        setTimeout(() => resolve(import('../View/Jobs')), 1000);
     });
 });
 const FreelancerAddServices = lazy(() => {

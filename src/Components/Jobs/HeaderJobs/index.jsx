@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
-import { useHistory, NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { signOut } from "../../../store/action/auth";
 import { Menu, Dropdown, Space } from "antd";
@@ -8,7 +8,7 @@ import { UserOutlined, CloseOutlined, SearchOutlined } from "@ant-design/icons";
 import { fetchTitleJobs } from "../../../store/action/jobs";
 const Header = () => {
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigation = useNavigate();
   const me = useSelector((state) => state.user.me);
   const title = useSelector((state) => state.jobs.titleJobs);
   useEffect(() => {
@@ -18,8 +18,8 @@ const Header = () => {
   const handleSignOut = () => {
     dispatch(
       signOut(() => {
-        if (history.location.pathname === "/me") {
-          history.push("/");
+        if (navigation.location.pathname === "/me") {
+          navigation("/");
         }
       })
     );
@@ -107,9 +107,11 @@ const Header = () => {
                     Browse Categories
                   </li>
                   <li className="py-2 text-base text-gray-500">Explore</li>
-                  <li className="py-2 text-base text-gray-500">Clancers INC Pro</li>
                   <li className="py-2 text-base text-gray-500">
-                    Clancers  Business
+                    Clancers INC Pro
+                  </li>
+                  <li className="py-2 text-base text-gray-500">
+                    Clancers Business
                   </li>
                 </ul>
                 <div className="pb-64 pt-8 pl-2">
@@ -174,11 +176,11 @@ const Header = () => {
                   style={{
                     paddingLeft: "3.5rem",
                     paddingTop: 6,
-                    fontSize: "2rem"
+                    fontSize: "2rem",
                   }}
                 />
               </div>
-              {showOption && (
+              {/* {showOption && (
                 <div
                   className="origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                   role="menu"
@@ -208,24 +210,23 @@ const Header = () => {
                     </button>
                   </div>
                 </div>
-              )}
+              )} */}
             </div>
-          ) : (
-            <>
-              <NavLink
-                to="/signin"
-                className="text-font-semibold text-base font-semibold text-center mt-5 text-gray-600 md:col-start-7 md:text-black hidden md:block lg:text-black "
-              >
-                Sign In
-              </NavLink>
-              <NavLink
-                to="/signin"
-                className="text-font-semibold text-base font-semibold text-center mt-5 text-gray-600 md:mr-16  md:col-start-8 md:text-black lg:h-7 lg:rounded lg:text-white lg:border-green-600 lg:bg-green-500 "
-              >
-                Join
-              </NavLink>
-            </>
-          )}
+          ) : // <>
+          //   <NavLink
+          //     to="/signin"
+          //     className="text-font-semibold text-base font-semibold text-center mt-5 text-gray-600 md:col-start-7 md:text-black hidden md:block lg:text-black "
+          //   >
+          //     Sign In
+          //   </NavLink>
+          //   <NavLink
+          //     to="/signin"
+          //     className="text-font-semibold text-base font-semibold text-center mt-5 text-gray-600 md:mr-16  md:col-start-8 md:text-black lg:h-7 lg:rounded lg:text-white lg:border-green-600 lg:bg-green-500 "
+          //   >
+          //     Join
+          //   </NavLink>
+          // </>
+          null}
         </div>
 
         {/* End responsive header */}
@@ -271,7 +272,7 @@ const Header = () => {
               to="/"
               className="flex items-center px-2 -mb-1 hover:text-green-500 text-gray-500 font-semibold text-base"
             >
-              Clancers  Business
+              Clancers Business
             </NavLink>
           </li>
           <li className="flex">
