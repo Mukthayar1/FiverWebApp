@@ -2,12 +2,12 @@ import React from "react";
 import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
-import "./ProfessionalServices.css"
-const Service = ({ title, data }) => {
+import "./ProfessionalServices.css";
+const Service = ({ title, data ,type}) => {
   let navigate = useNavigate();
 
   function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
+    const { className, style, onClick,  } = props;
     return (
       <div
         className={className}
@@ -41,25 +41,25 @@ const Service = ({ title, data }) => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          initialSlide: 3
-        }
+          initialSlide: 3,
+        },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <div className="xl:container xl:mx-0 mx-5 my-0  xl:my-20">
@@ -67,86 +67,99 @@ const Service = ({ title, data }) => {
         {title}
       </h2>
       <Slider {...settings}>
-        {data && data?.map((item, key) => {
-          console.log('data', item)
-          return (
-            // <div className="rounded relative" key={key}>
-            //   <img
-            //     className="px-4 rounded w-full h-full"
-            //     src={item?.file_Url}
-            //     alt="photo"
-            //     style={{minHeight:300}}
-            //   />
-            //   <div className="absolute top-2 left-9 text-white">
-            //     <p className="mb-0 font-normal text-base">{item?.title}</p>
-            //     <h4 className="text-white text-2xl font-bold">{item?.charges} $</h4>
-            //   </div>
-            // </div>
-            <div>
-              <main className="cards" key={key} onClick={() => navigate(`/product/${item?.docId}`)}>
-                <section className="card contact">
-                  <div className="icon">
-                    <img src={item?.file_Url} alt="Contact us." />
-                  </div>
-                  <div className="card_body">
-                    <div className="user">
-                      <img className="user_icon" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
-                      <h3>{item?.firstName} {item?.lastName}</h3>
+        {data &&
+          data?.map((item, key) => {
+            console.log("data", item);
+            return (
+              // <div className="rounded relative" key={key}>
+              //   <img
+              //     className="px-4 rounded w-full h-full"
+              //     src={item?.file_Url}
+              //     alt="photo"
+              //     style={{minHeight:300}}
+              //   />
+              //   <div className="absolute top-2 left-9 text-white">
+              //     <p className="mb-0 font-normal text-base">{item?.title}</p>
+              //     <h4 className="text-white text-2xl font-bold">{item?.charges} $</h4>
+              //   </div>
+              // </div>
+              <div>
+                <main
+                  className="cards"
+                  key={key}
+                  onClick={() => navigate(`/product/${item?.docId}/${type}`)}
+                >
+                  <section className="card contact">
+                    <div className="icon">
+                      <img src={item?.file_Url} alt="Contact us." />
                     </div>
-                    <div className="user_text">
-                      <h3>{item?.title}</h3>
-                    </div>
-                    {/* <div className="user_star">
+                    <div className="card_body">
+                      <div className="user">
+                        <img
+                          className="user_icon"
+                          src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo"
+                          alt="user"
+                        />
+                        <h3>
+                          {item?.firstName} {item?.lastName}
+                        </h3>
+                      </div>
+                      <div className="user_text">
+                        <h3>{item?.title}</h3>
+                      </div>
+                      {/* <div className="user_star">
                       <span>&#9733;</span>
                       <p className="yellow">5.0</p>
                       <p className="bracket">(131)</p>
                     </div> */}
-                  </div>
-                  <div className="user_line">
-                    <hr></hr>
-                  </div>
-                  {/* <h3>Contact us.</h3> */}
-                  <div className="card_bottom">
-                    <i className="fas fa-heart"></i>
-                    <div className="right" style={{ margin: 5 }}>
-                      <p>TOTAL AMOUNT</p>
-                      <p className="right_price" style={{ fontSize: 15 }}>USD {item?.charges}</p>
                     </div>
-                  </div>
-                  {/* <button className="btn1">{item?.charges}$</button> */}
-                </section>
-              </main>
-            </div>
-            //             <div className="cards" key={key}>
-            //   <div className="card">
-            //     <img className="card-img" src={item?.file_Url}/>
-            //         <div className="user">
-            //               <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
-            //               <div className="user-info">
-            //                 <h5>July Decaa</h5>
-            //                 <h1>{item?.title}</h1>
-            //                 {/* <small>2h ago</small> */}
-            //               </div>
-            //             </div>
-            //         <p className="">
-            //         Loremm ipsum dolor sit Praesentium aperiam adipisci exercitationem.
-            //       </p>
-            //       <div className="box" style={{display:"flex",}}>
-            //       <button type="button"className="on">
-            //           <span className="star">&#9733;</span>
-            //           </button>
-            //           <h4>5.0</h4>
-            //           <h5>(3)</h5>
-            //           </div>
-            //             {/* <p>(3)</p> */}
-            //       {/* <span className="tag tag-teal">{item?.charges} $</span> */}
-            //       {/* <hr className="line-break"></hr> */}
-            //       {/* <div className="star-rating">
-            //     </div> */}
-            //           </div>
-            // </div>
-          )
-        })}
+                    <div className="user_line">
+                      <hr></hr>
+                    </div>
+                    {/* <h3>Contact us.</h3> */}
+                    <div className="card_bottom">
+                      <i className="fas fa-heart"></i>
+                      <div className="right" style={{ margin: 5 }}>
+                        <p>TOTAL AMOUNT</p>
+                        <p className="right_price" style={{ fontSize: 15 }}>
+                          USD {item?.charges}
+                        </p>
+                      </div>
+                    </div>
+                    {/* <button className="btn1">{item?.charges}$</button> */}
+                  </section>
+                </main>
+              </div>
+              //             <div className="cards" key={key}>
+              //   <div className="card">
+              //     <img className="card-img" src={item?.file_Url}/>
+              //         <div className="user">
+              //               <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+              //               <div className="user-info">
+              //                 <h5>July Decaa</h5>
+              //                 <h1>{item?.title}</h1>
+              //                 {/* <small>2h ago</small> */}
+              //               </div>
+              //             </div>
+              //         <p className="">
+              //         Loremm ipsum dolor sit Praesentium aperiam adipisci exercitationem.
+              //       </p>
+              //       <div className="box" style={{display:"flex",}}>
+              //       <button type="button"className="on">
+              //           <span className="star">&#9733;</span>
+              //           </button>
+              //           <h4>5.0</h4>
+              //           <h5>(3)</h5>
+              //           </div>
+              //             {/* <p>(3)</p> */}
+              //       {/* <span className="tag tag-teal">{item?.charges} $</span> */}
+              //       {/* <hr className="line-break"></hr> */}
+              //       {/* <div className="star-rating">
+              //     </div> */}
+              //           </div>
+              // </div>
+            );
+          })}
         {/* <div to="/categories/jobs" className="rounded relative">
           <img
             className="px-4 rounded w-full h-full"

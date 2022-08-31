@@ -24,15 +24,12 @@ const GetJobs = (SetJobs) => {
     })
 }
 
-const GetDocDetails = (Setdata) => {
-    const q = collection(db, "Jobs");
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-        const EssayList = [];
-        querySnapshot.forEach((doc) => {
-            EssayList.push({ ...doc.data(), docId: doc.id });
-        });
-        Setdata(EssayList)
-    })
+const GetDocDetails = (Setdata, Setloading, Docid) => {
+    console.log('Docid?.Type===>', Docid?.Type)
+    const unsub = onSnapshot(doc(db, Docid?.Type, Docid?.DocId), (doc) => {
+        Setdata(doc.data());
+        Setloading(false)
+    });
 }
 
 

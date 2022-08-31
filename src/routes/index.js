@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
 import Loading from "../Components/LoadingScreen";
-import Product from "../Components/Product";
+// import Product from "../Components/Product";
 import useAuth from '../util/Contex/useAuth';
 import AdminRoutes from './AdminRoutes';
 import ClientRoutes from './ClientRoutes';
@@ -11,6 +11,11 @@ import FreelancerRoutes from './FreelancerRoutes';
 const HomeScreen = lazy(() => {
     return new Promise(resolve => {
         setTimeout(() => resolve(import('../View/Home')), 1000);
+    });
+});
+const Product = lazy(() => {
+    return new Promise(resolve => {
+        setTimeout(() => resolve(import('../Components/Product')), 1000);
     });
 });
 const LoginScreens = lazy(() => {
@@ -102,7 +107,7 @@ const MyRoutes = () => {
                         </>
                     }
 
-                    <Route path="/product/:title" element={<Product/>}/>
+                    <Route path="/product/:DocId/:Type" element={<Product />} />
 
                     <Route path="*" element={isLogged == 1 || isLogged == 0 ? <Navigate to="/" replace />
                         : (isLogged === 'super' ? <Navigate to="/admindashboard" replace />

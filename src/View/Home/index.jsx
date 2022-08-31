@@ -21,7 +21,6 @@ const Home = (props) => {
   }, [])
 
   let isLogged = localStorage.getItem("isLogged");
-  console.log('isLogged', isLogged)
 
 
   return (
@@ -71,10 +70,10 @@ const Home = (props) => {
           </li>
         </ul>
       </div>
-      <Service title={'Popular professional services'} data={Services} />
+      <Service title={'Popular professional services'} data={Services}type={'Services'} />
 
 
-      <Service title={'New Jobs'} data={Jobs} />
+      <Service title={'New Jobs'} data={Jobs} type={'Jobs'} />
 
 
       <div
@@ -87,7 +86,7 @@ const Home = (props) => {
       <MarketPlace />
       <Business />
       {isLogged == 1 ?
-        <Service title={'My Services'} data={Services} />
+        <Service title={'My Services'} data={Services} type={'Services'} />
         : null}
       <Testimonial />
 
