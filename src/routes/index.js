@@ -60,6 +60,12 @@ const FreelancerAddServices = lazy(() => {
     });
 });
 
+const Payments = lazy(() => {
+    return new Promise(resolve => {
+        setTimeout(() => resolve(import('../View/Payment')), 1000);
+    });
+});
+
 
 // import Category from "./View/Category";
 // import Jobs from "./View/Jobs";
@@ -108,6 +114,7 @@ const MyRoutes = () => {
                     }
 
                     <Route path="/product/:DocId/:Type" element={<Product />} />
+                    <Route path="/Payments" element={<Payments />} />
 
                     <Route path="*" element={isLogged == 1 || isLogged == 0 ? <Navigate to="/" replace />
                         : (isLogged === 'super' ? <Navigate to="/admindashboard" replace />

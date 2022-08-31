@@ -15,11 +15,14 @@ import Header from "../Header";
 import Footer from "../Footer";
 import { GetDocDetails } from "../../store/action/GetData";
 import { MutatingDots } from "react-loader-spinner";
+import { useNavigate } from "react-router-dom";
 
 function Product() {
   let Docid = useParams();
   const [data, Setdata] = useState();
   const [loading, Setloading] = useState(true);
+  let navigate = useNavigate();
+
   console.log("data", Docid);
 
   useEffect(() => {
@@ -506,6 +509,7 @@ function Product() {
                 </div> */}
 
                 <button
+                  onClick={() => navigate(`/payments`)}
                   className="w-full text-white font-bold p-2 rounded-md mt-3.5"
                   style={{ background: "#1dbf73" }}
                 >
