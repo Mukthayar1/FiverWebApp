@@ -3,11 +3,13 @@ import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
 import "./ProfessionalServices.css";
-const Service = ({ title, data ,type}) => {
+import useAuth from "../../util/Contex/useAuth";
+
+const Service = ({ title, data, type }) => {
   let navigate = useNavigate();
 
   function SampleNextArrow(props) {
-    const { className, style, onClick,  } = props;
+    const { className, style, onClick } = props;
     return (
       <div
         className={className}
@@ -61,14 +63,20 @@ const Service = ({ title, data ,type}) => {
       },
     ],
   };
+  let { auth } = useAuth();
+
+  const result = data.filter((data) => data.email != auth?.email);
+
+  console.log("result", result);
+
   return (
     <div className="xl:container xl:mx-0 mx-5 my-0  xl:my-20">
       <h2 className="text-4xl py-2 pb-3 font-medium xl:text-3xl  ml-4">
         {title}
       </h2>
       <Slider {...settings}>
-        {data &&
-          data?.map((item, key) => {
+        {result &&
+          result?.map((item, key) => {
             console.log("data", item);
             return (
               // <div className="rounded relative" key={key}>
