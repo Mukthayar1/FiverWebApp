@@ -33,7 +33,7 @@ const Home = () => {
     return (
         <div>
             <div className="main_layout">
-                {/* <Leftbar index={1} /> */}
+                <Leftbar index={1} />
                 <div className="right_bar">
                     <Cards heading="Home" />
                     <div className='mainhome'>

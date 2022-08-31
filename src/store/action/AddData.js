@@ -26,7 +26,7 @@ const AddService = async (values, RestForm, onCloseModal, file_Url, auth) => {
         service_name: values?.type?.name,
         create_date_time: new Date(),
         file_Url: file_Url,
-        Created_User_Email: auth?.email
+        ...auth
 
     };
 
@@ -101,8 +101,7 @@ const AddJob = async (values, RestForm, downloadURL, auth, jobtype) => {
         jobtype: jobtype,
         create_date_time: new Date(),
         file_Url: downloadURL,
-        Created_User_Email: auth?.email
-
+        ...auth
     };
 
     await setDoc(doc(db, "Jobs", uid), docData).then(() => {

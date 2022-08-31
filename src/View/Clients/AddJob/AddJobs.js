@@ -98,7 +98,7 @@ export default function AddJobs() {
         <CssBaseline />
 
         <div className={classes.paper}>
-        <h2 style={{ color:"black" ,padding:10, fontSize:"2.5em",letterSpacing:"2px"}}>Job Description</h2>
+        <h2 style={{ color:"black" ,padding:10, fontSize:"2.5em",letterSpacing:"2px"}}>Create Job</h2>
           <Grid style={{marginTop:-30}} container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField

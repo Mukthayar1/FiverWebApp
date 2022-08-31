@@ -110,10 +110,10 @@ const Footer = () => {
                 <a href="#">Trust & Safety</a>
               </li>
               <li className="mb-4">
-                <a href="#">Selling on Fiverr</a>
+                <a href="#">Selling on Clancers</a>
               </li>
               <li className="mb-4">
-                <a href="#">Buying on Fiverr</a>
+                <a href="#">Buying on Clancers</a>
               </li>
             </ul>
           </div>
@@ -148,7 +148,7 @@ const Footer = () => {
               </li>
               <li className="mb-4">
                 <a href="#">
-                  Fiverr Elevate <p className="w-2/5">Exclusive Benefits</p>
+                Clancers INC Elevate <p className="w-2/5">Exclusive Benefits</p>
                 </a>
               </li>
             </ul>
@@ -156,23 +156,23 @@ const Footer = () => {
         </div>
 
         <div className=" z-30 space-y-4">
-          <h2 className="font-semibold text-base">More From Fiverr </h2>
+          <h2 className="font-semibold text-base">More From Clancers INC </h2>
           <div className="text-list dark:text-coolGray-400">
             <ul>
               <li className="mb-4">
-                <a href="#">Fiverr Business</a>
+                <a href="#">Clancers Business</a>
               </li>
               <li className="mb-4">
-                <a href="#">Fiverr Pro</a>
+                <a href="#">Clancers Pro</a>
               </li>
               <li className="mb-4">
-                <a href="#">Fiverr Studios</a>
+                <a href="#">Clancers Studios</a>
               </li>
               <li className="mb-4">
-                <a href="#">Fiverr Logo Maker</a>
+                <a href="#">Clancers Logo Maker</a>
               </li>
               <li className="mb-4">
-                <a href="#">Fiverr Guides</a>
+                <a href="#">Clancers Guides</a>
               </li>
               <li className="mb-4">
                 <a href="#">Get Inspired</a>
@@ -272,10 +272,10 @@ const Footer = () => {
             Trust & Safety
           </Menu.Item>
           <Menu.Item className="text-gray-500 text-base" key="20">
-            Selling on Fiverr
+            Selling on Clancers 
           </Menu.Item>
           <Menu.Item className="text-gray-500 text-base" key="21">
-            Buying on Fiverr
+            Buying on Clancers 
           </Menu.Item>
         </SubMenu>
 
@@ -308,7 +308,7 @@ const Footer = () => {
             Become a Seller
           </Menu.Item>
           <Menu.Item className="text-gray-500 text-base" key="30">
-            Fiverr Elevate
+          Clancers INC Elevate
           </Menu.Item>
         </SubMenu>
 
@@ -319,19 +319,19 @@ const Footer = () => {
           }
         >
           <Menu.Item className="text-gray-500 text-base" key="31">
-            Fiverr Business
+            Clancers Business
           </Menu.Item>
           <Menu.Item className="text-gray-500 text-base" key="32">
-            Fiverr Pro
+            Clancers Pro
           </Menu.Item>
           <Menu.Item className="text-gray-500 text-base" key="33">
-            Fiverr Studios
+            Clancers Studios
           </Menu.Item>
           <Menu.Item className="text-gray-500 text-base" key="34">
-            Fiverr Logo Maker
+            Clancers Logo Maker
           </Menu.Item>
           <Menu.Item className="text-gray-500 text-base" key="35">
-            Fiverr Guides
+            Clancers Guides
           </Menu.Item>
           <Menu.Item className="text-gray-500 text-base" key="36">
             Get Inspired

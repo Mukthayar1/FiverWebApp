@@ -1,2 +1,0 @@
-(this.webpackJsonpfiverr=this.webpackJsonpfiverr||[]).push([[16],{549:function(r,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return i}));n(5);var t=n(10);function i(){return Object(t.jsx)("div",{children:"Orders"})}}}]);
-//# sourceMappingURL=16.a77cceb0.chunk.js.map

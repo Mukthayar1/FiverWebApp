@@ -80,7 +80,7 @@ const Business = () => {
               </ul>
             </div>
             <button className="bg-green-500 text-white text-base font-semibold mt-10 mb-20 px-4 py-2 rounded">
-              Expolore Fiverr Business
+              Expolore Clancers INC Business
             </button>
           </div>
 

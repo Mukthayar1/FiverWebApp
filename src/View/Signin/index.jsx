@@ -29,7 +29,7 @@ const Signin = () => {
           <div className="py-12 bg-indigo-100 lg:bg-white flex justify-center lg:justify-start lg:px-12">
             <div className="cursor-pointer flex items-center">
               <NavLink to="/">
-                <svg
+                {/* <svg
                   width="89"
                   height="27"
                   viewBox="0 0 89 27"
@@ -42,7 +42,10 @@ const Signin = () => {
                   <g fill="#1dbf73">
                     <path d="m85.3 27c2 0 3.7-1.7 3.7-3.7s-1.7-3.7-3.7-3.7-3.7 1.7-3.7 3.7 1.7 3.7 3.7 3.7z"></path>
                   </g>
-                </svg>
+                </svg> */}
+                <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
+                  style={{ height: 150, width: 300 }}
+                />
               </NavLink>
             </div>
           </div>

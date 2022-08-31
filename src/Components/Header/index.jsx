@@ -96,7 +96,7 @@ const Header = () => {
               onClick={handleSideBar}
               className="pl-6 pt-5 col-span-1 md:col-start-1 md:pl-16 md:pt-7 lg:pt-5 lg:pl-6"
             >
-              <svg
+              {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -109,14 +109,17 @@ const Header = () => {
                   strokeWidth="2"
                   d="M4 6h16M4 12h16M4 18h16"
                 ></path>
-              </svg>
+              </svg> */}
+              <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
+                style={{ height: 150, width: 300 }}
+              />
             </p>
           ) : (
             <p
               onClick={handleSideBar}
               className="pl-6 pt-5 col-span-1 md:col-start-1 md:pl-16 md:pt-7 lg:pt-5 lg:pl-6"
             >
-              <svg
+              {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -129,7 +132,11 @@ const Header = () => {
                   strokeWidth="2"
                   d="M4 6h16M4 12h16M4 18h16"
                 ></path>
-              </svg>
+              </svg> */}
+
+              <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
+                style={{ height: 150, width: 300 }}
+              />
             </p>
           )}
 
@@ -155,7 +162,7 @@ const Header = () => {
                   ) : (
                     <div className="col-span-2 " to="/signin">
                       <button className=" bg-green-500 text-base rounded text-white p-2 ">
-                        Join Fiverr
+                        Join Clancers
                       </button>
                     </div>
                   )}
@@ -179,9 +186,9 @@ const Header = () => {
                         Browse Categories
                       </li>
                       <li className="py-2 text-base text-gray-500">Explore</li>
-                      <li className="py-2 text-base text-gray-500">Fiverr Pro</li>
+                      <li className="py-2 text-base text-gray-500">Clancers INC Pro</li>
                       <li className="py-2 text-base text-gray-500">
-                        Fiverr Business
+                        Clancers  Business
                       </li>
                     </>
                     :
@@ -189,11 +196,11 @@ const Header = () => {
                       {isLogged == 0 ?
                         <>
                           <li className="py-2 " >
-                            <div  onClick={() => Move('AddJob')} className="text-base text-gray-500 hover:text-gray-500">
+                            <div onClick={() => Move('AddJob')} className="text-base text-gray-500 hover:text-gray-500">
                               Add Job
                             </div>
                           </li>
-                          <li onClick={() => Move('Freelancerorders')}  className="py-2 text-base text-gray-500">
+                          <li onClick={() => Move('Freelancerorders')} className="py-2 text-base text-gray-500">
                             Orders
                           </li>
                         </>
@@ -237,7 +244,7 @@ const Header = () => {
             aria-label="Back to homepage"
             className="pt-4 pl-6  lg:hidden md:col-start-2 md:pl-1 md:pt-6 lg:pt-4"
           >
-            <svg
+            {/* <svg
               width="89"
               height="27"
               viewBox="0 0 89 27"
@@ -250,7 +257,11 @@ const Header = () => {
               <g fill="#1dbf73">
                 <path d="m85.3 27c2 0 3.7-1.7 3.7-3.7s-1.7-3.7-3.7-3.7-3.7 1.7-3.7 3.7 1.7 3.7 3.7 3.7z"></path>
               </g>
-            </svg>
+            </svg> */}
+
+            <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
+                   style={{ height: 60, width:80,marginTop:-20 }}
+                />
           </div>
 
           {header ? (
@@ -279,7 +290,7 @@ const Header = () => {
               aria-label="Back to homepage"
               className="pt-4 pl-6 hidden lg:block md:col-start-2 md:pl-1 lg:-ml-16"
             >
-              <svg
+              {/* <svg
                 width="89"
                 height="27"
                 viewBox="0 0 89 27"
@@ -291,7 +302,10 @@ const Header = () => {
                 <g fill="#1dbf73">
                   <path d="m85.3 27c2 0 3.7-1.7 3.7-3.7s-1.7-3.7-3.7-3.7-3.7 1.7-3.7 3.7 1.7 3.7 3.7 3.7z"></path>
                 </g>
-              </svg>
+              </svg> */}
+              <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
+                  style={{ height: 60, width:80,marginTop:-20 }}
+                />
             </div>
           )}
 
@@ -300,7 +314,7 @@ const Header = () => {
             aria-label="Back to homepage"
             className="pt-4 pl-6 hidden xl:block md:col-start-2 md:pl-1"
           >
-            <svg
+            {/* <svg
               width="89"
               height="27"
               viewBox="0 0 89 27"
@@ -312,7 +326,10 @@ const Header = () => {
               <g fill="#1dbf73">
                 <path d="m85.3 27c2 0 3.7-1.7 3.7-3.7s-1.7-3.7-3.7-3.7-3.7 1.7-3.7 3.7 1.7 3.7 3.7 3.7z"></path>
               </g>
-            </svg>
+            </svg> */}
+            <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
+                  style={{ height: 60, width:80,marginTop:-20 }}
+                />
           </div>
 
           {header ? (
@@ -324,7 +341,7 @@ const Header = () => {
                       to="/"
                       className="flex items-center px-2 -mb-1 hover:text-green-500 text-black font-semibold text-base"
                     >
-                      Fiverr Business
+                      Clancers  Business
                     </div>
                   </li>
                   <li className="flex">
@@ -349,7 +366,7 @@ const Header = () => {
                     <>
                       <li className="flex">
                         <div
-                           onClick={() => Move('AddJob')}
+                          onClick={() => Move('AddJob')}
                           className={
                             header
                               ? "flex items-center px-2 -mb-1 hover:text-black text-black font-semibold text-base"
@@ -411,7 +428,7 @@ const Header = () => {
                       to="/"
                       className="flex items-center px-2 -mb-1 hover:text-green-500 text-white font-semibold text-base"
                     >
-                      Fiverr Business
+                      Clancers  Business
                     </div>
                   </li>
                   <li className="flex">
@@ -580,7 +597,7 @@ const Header = () => {
               aria-label="Back to homepage"
               className="pt-3 xl:block hidden md:hidden sm:flex sm:items-center p-2 col-start-2"
             >
-              <svg
+              {/* <svg
                 width="89"
                 height="27"
                 viewBox="0 0 89 27"
@@ -592,7 +609,10 @@ const Header = () => {
                 <g fill="#1dbf73">
                   <path d="m85.3 27c2 0 3.7-1.7 3.7-3.7s-1.7-3.7-3.7-3.7-3.7 1.7-3.7 3.7 1.7 3.7 3.7 3.7z"></path>
                 </g>
-              </svg>
+              </svg> */}
+              <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
+                 style={{ height: 60, width:80,marginTop:-20 }}
+                />
             </div>
           ) : (
             <div
@@ -600,7 +620,7 @@ const Header = () => {
               aria-label="Back to homepage"
               className="pt-3 xl:block hidden md:hidden sm:flex sm:items-center p-2 col-start-2"
             >
-              <svg
+              {/* <svg
                 width="89"
                 height="27"
                 viewBox="0 0 89 27"
@@ -612,7 +632,10 @@ const Header = () => {
                 <g fill="#1dbf73">
                   <path d="m85.3 27c2 0 3.7-1.7 3.7-3.7s-1.7-3.7-3.7-3.7-3.7 1.7-3.7 3.7 1.7 3.7 3.7 3.7z"></path>
                 </g>
-              </svg>
+              </svg> */}
+              <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
+                  style={{ height: 60, width:80,marginTop:-20 }}
+                />
             </div>
           )}
 
@@ -645,7 +668,7 @@ const Header = () => {
                         : "flex items-center px-2 -mb-1 hover:text-green-500 text-white font-semibold text-base"
                     }
                   >
-                    Fiverr Business
+                    Clancers  Business
                   </div>
                 </li>
                 <li className="flex">
@@ -680,7 +703,7 @@ const Header = () => {
                   <>
                     <li className="flex">
                       <div
-                         onClick={() => Move('AddJob')}
+                        onClick={() => Move('AddJob')}
                         className={
                           header
                             ? "flex items-center px-2 -mb-1 hover:text-black text-black font-semibold text-base"

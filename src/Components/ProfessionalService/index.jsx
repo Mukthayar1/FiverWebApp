@@ -83,7 +83,7 @@ const Service = ({ title, data }) => {
             //   </div>
             // </div>
             <div>
-              <main className="cards" key={key} onClick={() => navigate(`/product/${item?.title}`)}>
+              <main className="cards" key={key} onClick={() => navigate(`/product/${item?.docId}`)}>
                 <section className="card contact">
                   <div className="icon">
                     <img src={item?.file_Url} alt="Contact us." />
@@ -91,16 +91,16 @@ const Service = ({ title, data }) => {
                   <div className="card_body">
                     <div className="user">
                       <img className="user_icon" src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
-                      <h3>{item?.title}</h3>
+                      <h3>{item?.firstName} {item?.lastName}</h3>
                     </div>
                     <div className="user_text">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      <h3>{item?.title}</h3>
                     </div>
-                    <div className="user_star">
+                    {/* <div className="user_star">
                       <span>&#9733;</span>
                       <p className="yellow">5.0</p>
                       <p className="bracket">(131)</p>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="user_line">
                     <hr></hr>
@@ -109,7 +109,7 @@ const Service = ({ title, data }) => {
                   <div className="card_bottom">
                     <i className="fas fa-heart"></i>
                     <div className="right" style={{ margin: 5 }}>
-                      <p>STARTING AT</p>
+                      <p>TOTAL AMOUNT</p>
                       <p className="right_price" style={{ fontSize: 15 }}>USD {item?.charges}</p>
                     </div>
                   </div>

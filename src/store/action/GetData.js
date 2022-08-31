@@ -7,7 +7,7 @@ const GetServices = (SetServices) => {
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
         const EssayList = [];
         querySnapshot.forEach((doc) => {
-            EssayList.push(doc.data());
+            EssayList.push({ ...doc.data(), docId: doc.id });
         });
         SetServices(EssayList)
     })
@@ -18,9 +18,20 @@ const GetJobs = (SetJobs) => {
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
         const EssayList = [];
         querySnapshot.forEach((doc) => {
-            EssayList.push(doc.data());
+            EssayList.push({ ...doc.data(), docId: doc.id });
         });
         SetJobs(EssayList)
+    })
+}
+
+const GetDocDetails = (Setdata) => {
+    const q = collection(db, "Jobs");
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+        const EssayList = [];
+        querySnapshot.forEach((doc) => {
+            EssayList.push({ ...doc.data(), docId: doc.id });
+        });
+        Setdata(EssayList)
     })
 }
 
@@ -28,5 +39,6 @@ const GetJobs = (SetJobs) => {
 
 export {
     GetServices,
-    GetJobs
+    GetJobs,
+    GetDocDetails
 }
