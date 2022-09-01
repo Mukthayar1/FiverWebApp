@@ -5,7 +5,9 @@ import { NavLink } from "react-router-dom";
 import "./style.css"
 
 const ItemJobs = (props) => {
-  const { _id, name, image } = props.item;
+  const { _id, title, file_Url ,charges ,description } = props.item;
+
+  console.log('props.item',props.item)
 
   const content = (
     <div>
@@ -22,7 +24,7 @@ const ItemJobs = (props) => {
             placeholder={true}
             preview={false}
             height="176px"
-            src={image}
+            src={file_Url}
           />
         }
         actions={[
@@ -30,10 +32,11 @@ const ItemJobs = (props) => {
             <HeartFilled style={{ color: "#b5b6ba" }} />
           </Popover>,
 
-          <p>Starting at $10</p>
+          <p>Total Amount $ {charges}</p>
         ]}
       >
-        <p>{name}</p>
+        <p>{title}</p>
+        {/* <p>{description}</p> */}
       </Card>
     </NavLink>
   );

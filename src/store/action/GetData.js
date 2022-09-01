@@ -2,7 +2,7 @@ import { doc, setDoc, onSnapshot, collection, query, where, updateDoc, getDoc, g
 import { db } from '../../util/firebase';
 
 
-const GetServices = (SetServices) => {
+const GetServices = (SetServices, SetLoading) => {
     const q = collection(db, "Services");
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
         const EssayList = [];
@@ -10,10 +10,13 @@ const GetServices = (SetServices) => {
             EssayList.push({ ...doc.data(), docId: doc.id });
         });
         SetServices(EssayList)
+        if (SetLoading) {
+            SetLoading(false)
+        }
     })
 }
 
-const GetJobs = (SetJobs) => {
+const GetJobs = (SetJobs, SetLoading) => {
     const q = collection(db, "Jobs");
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
         const EssayList = [];
@@ -21,6 +24,9 @@ const GetJobs = (SetJobs) => {
             EssayList.push({ ...doc.data(), docId: doc.id });
         });
         SetJobs(EssayList)
+        if (SetLoading) {
+            SetLoading(false)
+        }
     })
 }
 

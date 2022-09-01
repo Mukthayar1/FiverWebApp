@@ -86,9 +86,9 @@ const MyRoutes = () => {
                     <Route path="/" element={<HomeScreen />} />
 
                     //FreelancerRoutes
-                    <Route element={<FreelancerRoutes isLogged={isLogged} auth={auth} />}>
+                    {/* <Route element={<FreelancerRoutes isLogged={isLogged} auth={auth} />}>
                         <Route path="/Orders" element={<FreelancerOrders />} />
-                    </Route>
+                    </Route> */}
                     <Route element={<FreelancerRoutes isLogged={isLogged} auth={auth} />}>
                         <Route path="/AddServices" element={<FreelancerAddServices />} />
                     </Route>
@@ -97,9 +97,9 @@ const MyRoutes = () => {
                     <Route element={<ClientRoutes isLogged={isLogged} auth={auth} />}>
                         <Route path="/AddJob" element={<ClientAddJob />} />
                     </Route>
-                    <Route element={<ClientRoutes isLogged={isLogged} auth={auth} />}>
+                    {/* <Route element={<ClientRoutes isLogged={isLogged} auth={auth} />}>
                         <Route path="/Orders" element={<ClientOrders />} />
-                    </Route>
+                    </Route> */}
 
                    //AdminRoutes
                     <Route element={<AdminRoutes isLogged={isLogged} auth={auth} />}>
@@ -115,6 +115,8 @@ const MyRoutes = () => {
 
                     <Route path="/product/:DocId/:Type" element={<Product />} />
                     <Route path="/Payments" element={<Payments />} />
+                    <Route path="/Orders" element={<ClientOrders />} />
+
 
                     <Route path="*" element={isLogged == 1 || isLogged == 0 ? <Navigate to="/" replace />
                         : (isLogged === 'super' ? <Navigate to="/admindashboard" replace />
