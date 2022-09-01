@@ -87,7 +87,7 @@ const MyRoutes = () => {
 
                     //FreelancerRoutes
                     <Route element={<FreelancerRoutes isLogged={isLogged} auth={auth} />}>
-                        <Route path="/Freelancerorders" element={<FreelancerOrders />} />
+                        <Route path="/Orders" element={<FreelancerOrders />} />
                     </Route>
                     <Route element={<FreelancerRoutes isLogged={isLogged} auth={auth} />}>
                         <Route path="/AddServices" element={<FreelancerAddServices />} />
@@ -98,7 +98,7 @@ const MyRoutes = () => {
                         <Route path="/AddJob" element={<ClientAddJob />} />
                     </Route>
                     <Route element={<ClientRoutes isLogged={isLogged} auth={auth} />}>
-                        <Route path="/Clientsorders" element={<ClientOrders />} />
+                        <Route path="/Orders" element={<ClientOrders />} />
                     </Route>
 
                    //AdminRoutes

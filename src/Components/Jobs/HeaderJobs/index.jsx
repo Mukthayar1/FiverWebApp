@@ -133,20 +133,10 @@ const Header = () => {
             aria-label="Back to homepage"
             className="pt-4 pl-6  xl:hidden md:col-start-2 md:pl-1 md:pt-6 lg:pt-4"
           >
-            <svg
-              width="89"
-              height="27"
-              viewBox="0 0 89 27"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g fill="#404145">
-                <path d="m81.6 13.1h-3.1c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-13.4h-2.5c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-18.4h6v2.8c1-2.2 2.3-2.8 4.3-2.8h7.3v2.8c1-2.2 2.3-2.8 4.3-2.8h2zm-25.2 5.6h-12.4c.3 2.1 1.6 3.2 3.7 3.2 1.6 0 2.7-.7 3.1-1.8l5.3 1.5c-1.3 3.2-4.5 5.1-8.4 5.1-6.5 0-9.5-5.1-9.5-9.5 0-4.3 2.6-9.4 9.1-9.4 6.9 0 9.2 5.2 9.2 9.1 0 .9 0 1.4-.1 1.8zm-5.7-3.5c-.1-1.6-1.3-3-3.3-3-1.9 0-3 .8-3.4 3zm-22.9 11.3h5.2l6.6-18.3h-6l-3.2 10.7-3.2-10.8h-6zm-24.4 0h5.9v-13.4h5.7v13.4h5.9v-18.4h-11.6v-1.1c0-1.2.9-2 2.2-2h3.5v-5h-4.4c-4.3 0-7.2 2.7-7.2 6.6v1.5h-3.4v5h3.4z"></path>
-              </g>
+            <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
+              style={{ height: 65, width: 100, marginTop: -20, marginRight: 20 }}
+            />
 
-              <g fill="#1dbf73">
-                <path d="m85.3 27c2 0 3.7-1.7 3.7-3.7s-1.7-3.7-3.7-3.7-3.7 1.7-3.7 3.7 1.7 3.7 3.7 3.7z"></path>
-              </g>
-            </svg>
           </NavLink>
 
           <NavLink
@@ -154,19 +144,9 @@ const Header = () => {
             aria-label="Back to homepage"
             className="pt-4 pl-6 hidden xl:block md:col-start-2 md:pl-1"
           >
-            <svg
-              width="89"
-              height="27"
-              viewBox="0 0 89 27"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g fill="#fff">
-                <path d="m81.6 13.1h-3.1c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-13.4h-2.5c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-18.4h6v2.8c1-2.2 2.3-2.8 4.3-2.8h7.3v2.8c1-2.2 2.3-2.8 4.3-2.8h2zm-25.2 5.6h-12.4c.3 2.1 1.6 3.2 3.7 3.2 1.6 0 2.7-.7 3.1-1.8l5.3 1.5c-1.3 3.2-4.5 5.1-8.4 5.1-6.5 0-9.5-5.1-9.5-9.5 0-4.3 2.6-9.4 9.1-9.4 6.9 0 9.2 5.2 9.2 9.1 0 .9 0 1.4-.1 1.8zm-5.7-3.5c-.1-1.6-1.3-3-3.3-3-1.9 0-3 .8-3.4 3zm-22.9 11.3h5.2l6.6-18.3h-6l-3.2 10.7-3.2-10.8h-6zm-24.4 0h5.9v-13.4h5.7v13.4h5.9v-18.4h-11.6v-1.1c0-1.2.9-2 2.2-2h3.5v-5h-4.4c-4.3 0-7.2 2.7-7.2 6.6v1.5h-3.4v5h3.4z"></path>
-              </g>
-              <g fill="#1dbf73">
-                <path d="m85.3 27c2 0 3.7-1.7 3.7-3.7s-1.7-3.7-3.7-3.7-3.7 1.7-3.7 3.7 1.7 3.7 3.7 3.7z"></path>
-              </g>
-            </svg>
+            <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
+              style={{ height: 65, width: 100, marginTop: -20, marginRight: 20 }}
+            />
           </NavLink>
 
           {me ? (
@@ -213,20 +193,20 @@ const Header = () => {
               )} */}
             </div>
           ) : // <>
-          //   <NavLink
-          //     to="/signin"
-          //     className="text-font-semibold text-base font-semibold text-center mt-5 text-gray-600 md:col-start-7 md:text-black hidden md:block lg:text-black "
-          //   >
-          //     Sign In
-          //   </NavLink>
-          //   <NavLink
-          //     to="/signin"
-          //     className="text-font-semibold text-base font-semibold text-center mt-5 text-gray-600 md:mr-16  md:col-start-8 md:text-black lg:h-7 lg:rounded lg:text-white lg:border-green-600 lg:bg-green-500 "
-          //   >
-          //     Join
-          //   </NavLink>
-          // </>
-          null}
+            //   <NavLink
+            //     to="/signin"
+            //     className="text-font-semibold text-base font-semibold text-center mt-5 text-gray-600 md:col-start-7 md:text-black hidden md:block lg:text-black "
+            //   >
+            //     Sign In
+            //   </NavLink>
+            //   <NavLink
+            //     to="/signin"
+            //     className="text-font-semibold text-base font-semibold text-center mt-5 text-gray-600 md:mr-16  md:col-start-8 md:text-black lg:h-7 lg:rounded lg:text-white lg:border-green-600 lg:bg-green-500 "
+            //   >
+            //     Join
+            //   </NavLink>
+            // </>
+            null}
         </div>
 
         {/* End responsive header */}
@@ -236,34 +216,26 @@ const Header = () => {
           aria-label="Back to homepage"
           className="pt-3 xl:block hidden md:hidden sm:flex sm:items-center p-2 col-start-2"
         >
-          <svg
-            width="89"
-            height="27"
-            viewBox="0 0 89 27"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g fill="#404145">
-              <path d="m81.6 13.1h-3.1c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-13.4h-2.5c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-18.4h6v2.8c1-2.2 2.3-2.8 4.3-2.8h7.3v2.8c1-2.2 2.3-2.8 4.3-2.8h2zm-25.2 5.6h-12.4c.3 2.1 1.6 3.2 3.7 3.2 1.6 0 2.7-.7 3.1-1.8l5.3 1.5c-1.3 3.2-4.5 5.1-8.4 5.1-6.5 0-9.5-5.1-9.5-9.5 0-4.3 2.6-9.4 9.1-9.4 6.9 0 9.2 5.2 9.2 9.1 0 .9 0 1.4-.1 1.8zm-5.7-3.5c-.1-1.6-1.3-3-3.3-3-1.9 0-3 .8-3.4 3zm-22.9 11.3h5.2l6.6-18.3h-6l-3.2 10.7-3.2-10.8h-6zm-24.4 0h5.9v-13.4h5.7v13.4h5.9v-18.4h-11.6v-1.1c0-1.2.9-2 2.2-2h3.5v-5h-4.4c-4.3 0-7.2 2.7-7.2 6.6v1.5h-3.4v5h3.4z"></path>
-            </g>
-            <g fill="#1dbf73">
-              <path d="m85.3 27c2 0 3.7-1.7 3.7-3.7s-1.7-3.7-3.7-3.7-3.7 1.7-3.7 3.7 1.7 3.7 3.7 3.7z"></path>
-            </g>
-          </svg>
+          <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
+            style={{ height: 65, width: 100, marginTop: -20, marginRight: 20 }}
+          />
         </NavLink>
 
-        <div className="relative w-1/4 -ml-52 mt-1">
+        <div className="relative w-1/4 -ml-32 pb-7 mt-1 flex">
           <SearchOutlined
             className="text-xl text-black absolute left-1 top-1 z-20 "
-            style={{ color: "#9ca3af" }}
+            style={{ color: "#9ca3af", height: '12px', width: '12px' }}
           />
-          <input
-            className="w-3/4 pl-6 py-2 rounded-tl rounded-bl outline-none border"
-            type="text"
-            placeholder="Find Services"
-          />
-          <button className=" py-2 px-4 border bg-green-500 border-green-500 text-white rounded-tr rounded-br">
-            Search
-          </button>
+          <div className="flex items-center">
+            <input
+              className="w-3/4 pl-6 py-2 rounded-tl rounded-bl outline-none border"
+              type="text"
+              placeholder="Find Services"
+            />
+            <button className=" py-2 px-4 border bg-green-500 border-green-500 text-white rounded-tr rounded-br">
+              Search
+            </button>
+          </div>
         </div>
 
         <ul className="mb-4 items-stretch mr-14 hidden space-x-3 xl:flex">

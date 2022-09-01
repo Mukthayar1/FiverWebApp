@@ -70,10 +70,12 @@ const Home = (props) => {
           </li>
         </ul>
       </div>
-      <Service title={'Popular professional services'} data={Services}type={'Services'} />
+      <Service title={'Popular professional services'} data={Services} type={'Services'} />
 
 
-      <Service title={'New Jobs'} data={Jobs} type={'Jobs'} />
+      {Jobs?.length > 0 ?
+        <Service title={'New Jobs'} data={Jobs} type={'Jobs'} />
+        : null}
 
 
       <div

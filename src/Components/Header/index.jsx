@@ -7,6 +7,7 @@ import { Menu, Dropdown, Space } from "antd";
 import { UserOutlined, CloseOutlined, SearchOutlined } from "@ant-design/icons";
 import { fetchTitleJobs } from "../../store/action/jobs";
 import useAuth from '../../util/Contex/useAuth'
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -80,6 +81,13 @@ const Header = () => {
     navigation(e)
   }
 
+
+  const matches1024 = useMediaQuery('(min-width:1024px)');
+  const matches950 = useMediaQuery('(min-width:950px)');
+  const matches768 = useMediaQuery('(min-width:768px)');
+  const matches340 = useMediaQuery('(min-width:340px)');
+
+
   return (
     <header
       // className={path ? "lg:fixed lg:p-4 z-40 w-full " : "xl:p-4 xl:pb-0"}
@@ -110,21 +118,22 @@ const Header = () => {
                   d="M4 6h16M4 12h16M4 18h16"
                 ></path>
               </svg> */}
-              <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
+              {/* <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
                 style={{ height: 150, width: 300 }}
-              />
+              /> */}
             </p>
           ) : (
             <p
               onClick={handleSideBar}
               className="pl-6 pt-5 col-span-1 md:col-start-1 md:pl-16 md:pt-7 lg:pt-5 lg:pl-6"
             >
-              {/* <svg
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 className="w-6 h-6 z-20 md:text-black lg:text-white"
+                style={{ marginLeft: matches1024?"":matches950?"-6rem":matches768?"-1.15rem":"0.415rem", marginTop:matches1024?"":matches950?"-0.4565rem":matches768?"-0.5rem":"0.065rem" }}
               >
                 <path
                   strokeLinecap="round"
@@ -132,11 +141,10 @@ const Header = () => {
                   strokeWidth="2"
                   d="M4 6h16M4 12h16M4 18h16"
                 ></path>
-              </svg> */}
-
-              <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
+              </svg>
+              {/* <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
                 style={{ height: 150, width: 300 }}
-              />
+              /> */}
             </p>
           )}
 
@@ -200,7 +208,7 @@ const Header = () => {
                               Add Job
                             </div>
                           </li>
-                          <li onClick={() => Move('Freelancerorders')} className="py-2 text-base text-gray-500">
+                          <li onClick={() => Move('Orders')} className="py-2 text-base text-gray-500">
                             Orders
                           </li>
                         </>
@@ -211,7 +219,7 @@ const Header = () => {
                               Add Services
                             </div>
                           </li>
-                          <li onClick={() => Move('Freelancerorders')} className="py-2 text-base text-gray-500">
+                          <li onClick={() => Move('Orders')} className="py-2 text-base text-gray-500">
                             Orders
                           </li>
                         </>
@@ -259,9 +267,17 @@ const Header = () => {
               </g>
             </svg> */}
 
-            <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
-                   style={{ height: 60, width:80,marginTop:-20 }}
+            {
+              matches340 ? (
+                <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
+                  style={{ height: "3.5rem", width: "6rem", objectFit: "contain", marginTop: matches1024 ? "" : matches768 ? -17 : -10 }}
                 />
+              ) : (
+                <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
+                  style={{ height: "360px", width: "360px", objectFit: "contain", marginTop: -163, marginLeft: -15 }}
+                />
+              )
+            }
           </div>
 
           {header ? (
@@ -304,8 +320,8 @@ const Header = () => {
                 </g>
               </svg> */}
               <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
-                  style={{ height: 60, width:80,marginTop:-20 }}
-                />
+                style={{ height: "3.75rem", width: "6rem", objectFit: "contain", marginTop: -12 }}
+              />
             </div>
           )}
 
@@ -328,8 +344,8 @@ const Header = () => {
               </g>
             </svg> */}
             <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
-                  style={{ height: 60, width:80,marginTop:-20 }}
-                />
+              style={{ height: 60, width: 80, marginTop: -20 }}
+            />
           </div>
 
           {header ? (
@@ -378,7 +394,7 @@ const Header = () => {
                       </li>
                       <li className="flex">
                         <div
-                          onClick={() => Move('Freelancerorders')}
+                          onClick={() => Move('Orders')}
                           className={
                             header
                               ? "flex items-center px-2 -mb-1 hover:text-black text-black font-semibold text-base"
@@ -404,7 +420,7 @@ const Header = () => {
                       </li>
                       <li className="flex">
                         <div
-                          onClick={() => Move('Freelancerorders')}
+                          onClick={() => Move('Orders')}
                           className={
                             header
                               ? "flex items-center px-2 -mb-1 hover:text-black text-black font-semibold text-base"
@@ -465,7 +481,7 @@ const Header = () => {
                       </li>
                       <li className="flex">
                         <div
-                          onClick={() => Move('Freelancerorders')}
+                          onClick={() => Move('Orders')}
                           className={
                             header
                               ? "flex items-center px-2 -mb-1 hover:text-black text-black font-semibold text-base"
@@ -491,7 +507,7 @@ const Header = () => {
                       </li>
                       <li className="flex">
                         <div
-                          onClick={() => Move('Freelancerorders')}
+                          onClick={() => Move('Orders')}
                           className={
                             header
                               ? "flex items-center px-2 -mb-1 hover:text-black text-black font-semibold text-base"
@@ -611,8 +627,8 @@ const Header = () => {
                 </g>
               </svg> */}
               <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
-                 style={{ height: 60, width:80,marginTop:-20 }}
-                />
+                style={{ height: 60, width: 80, marginTop: -20 }}
+              />
             </div>
           ) : (
             <div
@@ -634,8 +650,8 @@ const Header = () => {
                 </g>
               </svg> */}
               <img src={'https://firebasestorage.googleapis.com/v0/b/clancers-inc.appspot.com/o/w1.jpeg?alt=media&token=2ee46425-98c8-4a55-af50-27f76eaedf0d '}
-                  style={{ height: 60, width:80,marginTop:-20 }}
-                />
+                style={{ height: "3.75rem", width: "6rem", objectFit: "contain", marginTop: -12 }}
+              />
             </div>
           )}
 
@@ -715,7 +731,7 @@ const Header = () => {
                     </li>
                     <li className="flex">
                       <div
-                        onClick={() => Move('Freelancerorders')}
+                        onClick={() => Move('Orders')}
                         className={
                           header
                             ? "flex items-center px-2 -mb-1 hover:text-black text-black font-semibold text-base"
@@ -741,7 +757,7 @@ const Header = () => {
                     </li>
                     <li className="flex">
                       <div
-                        onClick={() => Move('Freelancerorders')}
+                        onClick={() => Move('Orders')}
                         className={
                           header
                             ? "flex items-center px-2 -mb-1 hover:text-black text-black font-semibold text-base"
